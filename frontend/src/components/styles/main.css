@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: start;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-block: 15px;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+a {
+    color: var(--color-dark);
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-base);
+    font-size: var(--font-size);
+    line-height: var(--font-height);
+    text-decoration: none;
+}
+
+.link {
+    font-weight: 600;
+    position: relative;
+}
+
+.link.active::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 2px;
+    border-radius: 10px;
+    background-color: currentColor;
+}
+
+.hero-body {
+    margin-block: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 250px;
+    gap: 30px;
+}
+
+.hero-item--big {
+    grid-row: span 2;
+}
+
+.hero-item {
+    border-radius: 10px;
+    overflow: hidden;
+    color: var(--color-light);
+    padding: 20px;
+}
+
+.hero-item[data-type="sport"] {
+    background-color: var(--color-section-sport);
+}
+
+.hero-item[data-type="men"] {
+    background-color: var(--color-section-men);
+}
+
+.hero-item[data-type="fashion"] {
+    background-color: var(--color-section-fashion);
+}
+
+.hero-card {
+    position: relative;
+    height: 100%;
+    padding-inline: 20px;
+    padding-bottom: 50px;
+}
+
+.hero-card__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.hero-card[data-type="sport"] img {
+    transform: translate(45deg);
+    scale: 1.5;
+}
+
+.hero-card[data-type="men"] img {
+    transform: translate(45deg);
+    scale: 1.5;
+}
+
+.hero-card__title {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    z-index: 2;
+}
+
+.hero-card__link {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 2;
+    color: var(--color-light);
+}

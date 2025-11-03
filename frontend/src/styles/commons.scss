@@ -1,0 +1,11 @@
+html,
+body {
+    font-family: var(--font-base);
+    font-size: var(--font-size);
+    line-height: var(--font-height);
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}

@@ -1,0 +1,4 @@
+<div class="container">
+    <main-nav></main-nav>
+    <div id="content"></div>
+</div>
