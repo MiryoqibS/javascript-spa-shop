@@ -14,7 +14,10 @@ class HeroSectionComponent extends HTMLElement {
         const style = document.createElement("style");
         style.textContent = css;
         const container = document.createElement("div");
-        container.setAttribute("class", "hero-body");
+        container.setAttribute("class", "hero-main");
+
+        const bannersWrapper = document.createElement("div");
+        bannersWrapper.setAttribute("class", "hero-body");
         this.banners.forEach(banner => {
             const bannerElement = document.createElement("hero-banner");
             bannerElement.setAttribute("title", banner.title);
@@ -22,8 +25,10 @@ class HeroSectionComponent extends HTMLElement {
             bannerElement.setAttribute("href", banner.href);
             bannerElement.setAttribute("class", banner.class);
             bannerElement.setAttribute("data-type", banner.type);
-            container.appendChild(bannerElement);
+            bannersWrapper.appendChild(bannerElement);
         });
+
+        container.appendChild(bannersWrapper);
         shadow.appendChild(container);
         shadow.appendChild(style);
     }

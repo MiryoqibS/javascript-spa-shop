@@ -1,3 +1,9 @@
-<div>
-    <hero-section></hero-section>
-</div>
+<hero-section></hero-section>
+
+<main-banner 
+    title="10% скидка на наши товары" 
+    description="Подпишитесь, чтобы получить купон на первую покупку" 
+    href="/discount" 
+    data-background-text="10% Скидки"
+    buttonText="подписаться"
+></main-banner>

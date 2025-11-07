@@ -6,7 +6,8 @@ import Layout from "../pages/Layout.template";
 import MainPage from "../pages/MainPage.template";
 import MensPage from "../pages/MensPage.template";
 import WomensPage from "../pages/WomensPage.template";
-
+import SportPage from "../pages/SportPage.template";
+import FashionPage from "../pages/FashionPage.template";
 
 const appContainer = document.getElementById("app");
 
@@ -15,6 +16,8 @@ export const Routes = {
     Main: new Route(Constants.routes.index),
     Mens: new Route(Constants.routes.men),
     Womens: new Route(Constants.routes.women),
+    Sport: new Route(Constants.routes.sport),
+    Fashion: new Route(Constants.routes.fashion),
 };
 
 // == Рендеринг страницы по URL ==
@@ -30,6 +33,10 @@ export const render = (path) => {
         result = MensPage();
     } else if (Routes.Womens.match(path)) {
         result = WomensPage();
+    } else if (Routes.Sport.match(path)) {
+        result = SportPage();
+    } else if (Routes.Fashion.match(path)) {
+        result = FashionPage();
     };
 
     content.innerHTML = result;

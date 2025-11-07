@@ -9,5 +9,5 @@ export const Constants = {
     logo: {
         title: "Stylish",
         description: "Online Store"
-    },
+    }
 };
